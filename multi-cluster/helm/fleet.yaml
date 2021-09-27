@@ -1,26 +1,14 @@
 namespace: fleet-mc-helm-example
 targetCustomizations:
-- name: dev
+- name: ec2
   helm:
     values:
       replication: false
-  clusterSelector:
-    matchLabels:
-      env: dev
+  clusterGroup: ec2-clusters
 
-- name: test
-  helm:
-    values:
-      replicas: 3
-  clusterSelector:
-    matchLabels:
-      env: test
-
-- name: prod
+- name: eks
   helm:
     values:
       serviceType: LoadBalancer
       replicas: 3
-  clusterSelector:
-    matchLabels:
-      env: prod
+  clusterGroup: 	eks-clusters
