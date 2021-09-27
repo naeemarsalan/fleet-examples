@@ -11,4 +11,4 @@ targetCustomizations:
     values:
       serviceType: LoadBalancer
       replicas: 3
-  clusterGroup: 	eks-clusters
+  clusterGroup: eks-clusters
